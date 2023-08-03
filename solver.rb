@@ -11,5 +11,10 @@ class Solver
     num * factorial(num - 1)
   end
 
+  def reverse(word)
+    return 'Argument cannot be an integer' unless word.is_a?(String)
+
+    word.reverse
+  end
 end
 
