@@ -16,4 +16,28 @@ class Solver
 
     word.reverse
   end
+
+  def fizzbuzz(num)
+    if (num % 3).zero? && (num % 5).zero?
+      'fizzbuzz'
+    elsif (num % 3).zero?
+      'fizz'
+    elsif (num % 5).zero?
+      'buzz'
+    else
+      num.to_s
+    end
+  end
 end
+
+# console tests
+
+solve = Solver.new
+facto = solve.factorial(6)
+puts facto
+
+test = solve.reverse('Mohamed')
+puts test
+
+Ns = solve.fizzbuzz(12)
+puts Ns
