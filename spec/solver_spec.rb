@@ -20,5 +20,15 @@ describe Solver do
   it 'raise an exception for negative number' do
     expect { @solver.factorial(-1) }.to raise_error(RuntimeError, 'Argument cannot be negative')
   end
-  
+
+  # test for reverse method
+  it 'reverse the string Mohamed' do
+    result = @solver.reverse('Mohamed')
+    expect(result).to eq('demahoM')
+  end
+
+  it 'raise an exception if sent integer argument' do
+    result = @solver.reverse(1)
+    expect(result).to eq('Argument cannot be an integer')
+  end
 end
